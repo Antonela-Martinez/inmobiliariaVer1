@@ -1,4 +1,5 @@
 #pragma once
+#include "User.h"
 
 namespace inmobiliariaVer1 {
 
