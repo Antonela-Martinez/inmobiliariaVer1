@@ -186,6 +186,9 @@ namespace inmobiliariaVer1 {
 	private: System::Void btnCancelar_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+
+	public: User^ user = nullptr;
+
 	private: System::Void btnOK_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ email = this->tbEmail->Text;
 		String^ password = this->tbPassword->Text;
@@ -209,6 +212,14 @@ namespace inmobiliariaVer1 {
 
 			/*SqlDataReader^ reader = command.ExecuteReader();
 			if (reader->Read()) {
+				user = gcnew User;
+				user->id = reader->GetInt32(0);
+				user->name = reader->GetString(1);
+				user->email = reader->GetString(2);
+				user->phone = reader->GetString(3);
+				user->address = reader->GetString4);
+				user->password = reader->GetString(5);
+
 				this->Close();
 			}
 			else {
