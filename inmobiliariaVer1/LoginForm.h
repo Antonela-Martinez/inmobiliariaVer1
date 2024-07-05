@@ -43,6 +43,7 @@ namespace inmobiliariaVer1 {
 	private: System::Windows::Forms::TextBox^ tbPassword;
 	private: System::Windows::Forms::Button^ btnOK;
 	private: System::Windows::Forms::Button^ btnCancelar;
+	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
 
 
 
@@ -68,18 +69,21 @@ namespace inmobiliariaVer1 {
 			this->tbPassword = (gcnew System::Windows::Forms::TextBox());
 			this->btnOK = (gcnew System::Windows::Forms::Button());
 			this->btnCancelar = (gcnew System::Windows::Forms::Button());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->tableLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->label1->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->label1->Location = System::Drawing::Point(4, 3);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(3, 2);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(987, 100);
+			this->label1->Size = System::Drawing::Size(317, 80);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Loging";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -87,60 +91,66 @@ namespace inmobiliariaVer1 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label2->Location = System::Drawing::Point(80, 168);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label2->Location = System::Drawing::Point(12, 103);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(126, 40);
+			this->label2->Size = System::Drawing::Size(114, 35);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Email:";
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// tbEmail
 			// 
-			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbEmail->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tbEmail->Location = System::Drawing::Point(309, 165);
-			this->tbEmail->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->tbEmail->Location = System::Drawing::Point(10, 145);
+			this->tbEmail->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(651, 44);
+			this->tbEmail->Size = System::Drawing::Size(300, 39);
 			this->tbEmail->TabIndex = 2;
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->label3->Location = System::Drawing::Point(64, 269);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(12, 210);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(192, 40);
+			this->label3->Size = System::Drawing::Size(170, 35);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Password:";
 			// 
 			// tbPassword
 			// 
-			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbPassword->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tbPassword->Location = System::Drawing::Point(309, 269);
-			this->tbPassword->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->tbPassword->Location = System::Drawing::Point(12, 254);
+			this->tbPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(651, 44);
+			this->tbPassword->Size = System::Drawing::Size(301, 39);
 			this->tbPassword->TabIndex = 4;
 			// 
 			// btnOK
 			// 
+			this->btnOK->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->btnOK->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnOK->ForeColor = System::Drawing::Color::MediumAquamarine;
-			this->btnOK->Location = System::Drawing::Point(309, 361);
+			this->btnOK->Location = System::Drawing::Point(2, 2);
+			this->btnOK->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnOK->Name = L"btnOK";
-			this->btnOK->Size = System::Drawing::Size(292, 55);
+			this->btnOK->Size = System::Drawing::Size(146, 43);
 			this->btnOK->TabIndex = 5;
 			this->btnOK->Text = L"OK";
 			this->btnOK->UseVisualStyleBackColor = true;
@@ -148,36 +158,58 @@ namespace inmobiliariaVer1 {
 			// 
 			// btnCancelar
 			// 
+			this->btnCancelar->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->btnCancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCancelar->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
-			this->btnCancelar->Location = System::Drawing::Point(675, 361);
+			this->btnCancelar->Location = System::Drawing::Point(152, 2);
+			this->btnCancelar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnCancelar->Name = L"btnCancelar";
-			this->btnCancelar->Size = System::Drawing::Size(285, 55);
+			this->btnCancelar->Size = System::Drawing::Size(147, 43);
 			this->btnCancelar->TabIndex = 6;
 			this->btnCancelar->Text = L"Cancelar";
 			this->btnCancelar->UseVisualStyleBackColor = true;
 			this->btnCancelar->Click += gcnew System::EventHandler(this, &LoginForm::btnCancelar_Click);
 			// 
+			// tableLayoutPanel1
+			// 
+			this->tableLayoutPanel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->tableLayoutPanel1->ColumnCount = 2;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel1->Controls->Add(this->btnOK, 0, 0);
+			this->tableLayoutPanel1->Controls->Add(this->btnCancelar, 1, 0);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(12, 340);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 1;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(301, 47);
+			this->tableLayoutPanel1->TabIndex = 7;
+			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
-			this->ClientSize = System::Drawing::Size(991, 450);
-			this->Controls->Add(this->btnCancelar);
-			this->Controls->Add(this->btnOK);
+			this->ClientSize = System::Drawing::Size(325, 411);
+			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->tbPassword);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->tbEmail);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MinimumSize = System::Drawing::Size(347, 467);
 			this->Name = L"LoginForm";
 			this->Text = L"Login Form";
+			this->tableLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
