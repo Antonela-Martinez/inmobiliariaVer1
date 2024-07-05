@@ -198,7 +198,7 @@ namespace inmobiliariaVer1 {
 				"Email or Password Empty", MessageBoxButtons::OK);
 			return;
 	    }
-
+		/*
 		try
 		{
 			//String^ connstring = "";//12:20 Pner link de coneccion con la base de datos
@@ -210,7 +210,7 @@ namespace inmobiliariaVer1 {
 			//command.Parameters->AddWithValue("@email", email);
 			//command.Parameters->AddWithValue("@pwd", password);
 
-			/*SqlDataReader^ reader = command.ExecuteReader();
+			SqlDataReader^ reader = command.ExecuteReader();
 			if (reader->Read()) {
 				user = gcnew User;
 				user->id = reader->GetInt32(0);
@@ -225,13 +225,13 @@ namespace inmobiliariaVer1 {
 			else {
 				MessageBox::Show("email or password is incorrect",
 					"Email or Password Error", MessageBoxButtons::OK);
-			}*/
+			}
 		}
 		catch (Exception^ e)
 		{
 			MessageBox::Show("Failed to connect to database",
 				"Database Connection Error",MessageBoxButtons::OK);
-		}
+		}*/
 	}
 };
 }

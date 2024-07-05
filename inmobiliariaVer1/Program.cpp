@@ -3,14 +3,14 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-void main(array<String^>^ arg)
+void main(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	inmobiliariaVer1::LoginForm loginForm;
 
 	loginForm.ShowDialog();
-	User^ user loginForm.user;
+	User^ user = loginForm.user;
 
 	if (user != nullptr) {
 		MessageBox::Show("Successfull Authentication of " + user->name,
