@@ -119,6 +119,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -126,6 +127,8 @@
   <ItemGroup>
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="NuevoClienteForm.cpp" />
+    <ClCompile Include="NuevoInmuebleForm.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="RegisterForm.cpp" />
   </ItemGroup>
@@ -134,6 +137,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NuevoClienteForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NuevoInmuebleForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="RegisterForm.h">
@@ -147,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoClienteForm.resx">
+      <DependentUpon>NuevoClienteForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoInmuebleForm.resx">
+      <DependentUpon>NuevoInmuebleForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.h</DependentUpon>

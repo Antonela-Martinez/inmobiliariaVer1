@@ -76,6 +76,16 @@ namespace inmobiliariaVer1 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Suarez;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ numerodni;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ propietario;
+	private: System::Windows::Forms::PictureBox^ pictureBox11;
+	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn5;
+	private: System::Windows::Forms::PictureBox^ pictureBox12;
 	protected:
 
 
@@ -126,6 +136,16 @@ namespace inmobiliariaVer1 {
 			this->Suarez = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->numerodni = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->propietario = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox11 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
@@ -141,6 +161,9 @@ namespace inmobiliariaVer1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -452,6 +475,11 @@ namespace inmobiliariaVer1 {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->panel3->Controls->Add(this->dataGridView2);
+			this->panel3->Controls->Add(this->pictureBox12);
+			this->panel3->Controls->Add(this->pictureBox11);
+			this->panel3->Controls->Add(this->button10);
+			this->panel3->Controls->Add(this->label4);
 			this->panel3->Controls->Add(this->dataGridView1);
 			this->panel3->Controls->Add(this->lbUserInfo);
 			this->panel3->Controls->Add(this->button1);
@@ -509,6 +537,101 @@ namespace inmobiliariaVer1 {
 			this->propietario->Name = L"propietario";
 			this->propietario->Width = 150;
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->label4->Location = System::Drawing::Point(71, 378);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(182, 40);
+			this->label4->TabIndex = 4;
+			this->label4->Text = L"Inmuebles";
+			// 
+			// button10
+			// 
+			this->button10->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button10->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button10->Location = System::Drawing::Point(687, 369);
+			this->button10->Margin = System::Windows::Forms::Padding(1);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(161, 54);
+			this->button10->TabIndex = 5;
+			this->button10->Text = L"Nuevo";
+			this->button10->UseVisualStyleBackColor = false;
+			// 
+			// pictureBox11
+			// 
+			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox11.Image")));
+			this->pictureBox11->Location = System::Drawing::Point(625, 373);
+			this->pictureBox11->Name = L"pictureBox11";
+			this->pictureBox11->Size = System::Drawing::Size(58, 50);
+			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox11->TabIndex = 6;
+			this->pictureBox11->TabStop = false;
+			// 
+			// pictureBox12
+			// 
+			this->pictureBox12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox12.Image")));
+			this->pictureBox12->Location = System::Drawing::Point(625, 45);
+			this->pictureBox12->Name = L"pictureBox12";
+			this->pictureBox12->Size = System::Drawing::Size(58, 50);
+			this->pictureBox12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox12->TabIndex = 7;
+			this->pictureBox12->TabStop = false;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->dataGridViewTextBoxColumn1,
+					this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewTextBoxColumn5
+			});
+			this->dataGridView2->Location = System::Drawing::Point(57, 471);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersWidth = 62;
+			this->dataGridView2->RowTemplate->Height = 28;
+			this->dataGridView2->Size = System::Drawing::Size(809, 150);
+			this->dataGridView2->TabIndex = 8;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this->dataGridViewTextBoxColumn1->HeaderText = L"Acciones";
+			this->dataGridViewTextBoxColumn1->MinimumWidth = 8;
+			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+			this->dataGridViewTextBoxColumn1->Width = 150;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this->dataGridViewTextBoxColumn2->HeaderText = L"Dirección";
+			this->dataGridViewTextBoxColumn2->MinimumWidth = 8;
+			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+			this->dataGridViewTextBoxColumn2->Width = 150;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this->dataGridViewTextBoxColumn3->HeaderText = L"Propietario";
+			this->dataGridViewTextBoxColumn3->MinimumWidth = 8;
+			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+			this->dataGridViewTextBoxColumn3->Width = 150;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this->dataGridViewTextBoxColumn4->HeaderText = L"Tipo Inmueble";
+			this->dataGridViewTextBoxColumn4->MinimumWidth = 8;
+			this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
+			this->dataGridViewTextBoxColumn4->Width = 150;
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this->dataGridViewTextBoxColumn5->HeaderText = L"Estado Inmueble";
+			this->dataGridViewTextBoxColumn5->MinimumWidth = 8;
+			this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
+			this->dataGridViewTextBoxColumn5->Width = 150;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -538,6 +661,9 @@ namespace inmobiliariaVer1 {
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
