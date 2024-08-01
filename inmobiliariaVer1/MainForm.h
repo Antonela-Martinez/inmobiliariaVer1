@@ -65,12 +65,17 @@ namespace inmobiliariaVer1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox9;
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+
+
+
+
+	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Acciones;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Mario;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Suarez;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ numerodni;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ propietario;
-	private: System::Windows::Forms::Button^ button9;
 	protected:
 
 
@@ -91,6 +96,7 @@ namespace inmobiliariaVer1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->lbUserInfo = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
@@ -120,7 +126,6 @@ namespace inmobiliariaVer1 {
 			this->Suarez = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->numerodni = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->propietario = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
@@ -189,8 +194,20 @@ namespace inmobiliariaVer1 {
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Location = System::Drawing::Point(11, 116);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(258, 662);
+			this->panel1->Size = System::Drawing::Size(258, 688);
 			this->panel1->TabIndex = 2;
+			// 
+			// button9
+			// 
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button9->ForeColor = System::Drawing::SystemColors::AppWorkspace;
+			this->button9->Location = System::Drawing::Point(75, 225);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(161, 40);
+			this->button9->TabIndex = 6;
+			this->button9->Text = L"Inicio";
+			this->button9->UseVisualStyleBackColor = true;
 			// 
 			// pictureBox8
 			// 
@@ -313,7 +330,6 @@ namespace inmobiliariaVer1 {
 			this->label2->Size = System::Drawing::Size(261, 25);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"SISTEMA INMOBILIARIO";
-		
 			// 
 			// button8
 			// 
@@ -398,7 +414,6 @@ namespace inmobiliariaVer1 {
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Clientes";
 			this->button2->UseVisualStyleBackColor = true;
-		
 			// 
 			// button1
 			// 
@@ -442,7 +457,7 @@ namespace inmobiliariaVer1 {
 			this->panel3->Controls->Add(this->button1);
 			this->panel3->Location = System::Drawing::Point(345, 127);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(921, 662);
+			this->panel3->Size = System::Drawing::Size(921, 677);
 			this->panel3->TabIndex = 4;
 			// 
 			// dataGridView1
@@ -461,10 +476,9 @@ namespace inmobiliariaVer1 {
 			// 
 			// Acciones
 			// 
-			this->Acciones->HeaderText = L"Column1";
+			this->Acciones->HeaderText = L"Acciones";
 			this->Acciones->MinimumWidth = 8;
 			this->Acciones->Name = L"Acciones";
-			this->Acciones->ReadOnly = true;
 			this->Acciones->Width = 150;
 			// 
 			// Mario
@@ -472,7 +486,6 @@ namespace inmobiliariaVer1 {
 			this->Mario->HeaderText = L"Nombre";
 			this->Mario->MinimumWidth = 8;
 			this->Mario->Name = L"Mario";
-			this->Mario->ReadOnly = true;
 			this->Mario->Width = 150;
 			// 
 			// Suarez
@@ -480,7 +493,6 @@ namespace inmobiliariaVer1 {
 			this->Suarez->HeaderText = L"Apellido";
 			this->Suarez->MinimumWidth = 8;
 			this->Suarez->Name = L"Suarez";
-			this->Suarez->ReadOnly = true;
 			this->Suarez->Width = 150;
 			// 
 			// numerodni
@@ -488,7 +500,6 @@ namespace inmobiliariaVer1 {
 			this->numerodni->HeaderText = L"DNI";
 			this->numerodni->MinimumWidth = 8;
 			this->numerodni->Name = L"numerodni";
-			this->numerodni->ReadOnly = true;
 			this->numerodni->Width = 150;
 			// 
 			// propietario
@@ -496,20 +507,7 @@ namespace inmobiliariaVer1 {
 			this->propietario->HeaderText = L"rol";
 			this->propietario->MinimumWidth = 8;
 			this->propietario->Name = L"propietario";
-			this->propietario->ReadOnly = true;
 			this->propietario->Width = 150;
-			// 
-			// button9
-			// 
-			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button9->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button9->Location = System::Drawing::Point(75, 225);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(161, 40);
-			this->button9->TabIndex = 6;
-			this->button9->Text = L"Inicio";
-			this->button9->UseVisualStyleBackColor = true;
 			// 
 			// MainForm
 			// 
@@ -542,9 +540,7 @@ namespace inmobiliariaVer1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
-			
-
-			}
+		}
 
 
 };
