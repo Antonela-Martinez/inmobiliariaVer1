@@ -10,6 +10,6 @@ public:
 	String^ name;
 	String^ email;
 	String^ phone;
-	String^ addres;
+	String^ address;
 	String^ password;
 };
