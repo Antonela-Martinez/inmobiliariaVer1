@@ -20,7 +20,7 @@ namespace inmobiliariaVer1 {
 		LoginForm(void)
 		{
 			InitializeComponent();
-			//
+			//COMENTADO POR GONZALAD
 			//TODO: agregar código de constructor aquí
 			//
 		}
@@ -90,6 +90,7 @@ namespace inmobiliariaVer1 {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Loging";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label1->Click += gcnew System::EventHandler(this, &LoginForm::label1_Click);
 			// 
 			// label2
 			// 
@@ -100,9 +101,9 @@ namespace inmobiliariaVer1 {
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label2->Location = System::Drawing::Point(12, 103);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(114, 35);
+			this->label2->Size = System::Drawing::Size(94, 29);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Email:";
+			this->label2->Text = L"Email Person:";
 			// 
 			// tbEmail
 			// 
@@ -113,7 +114,7 @@ namespace inmobiliariaVer1 {
 			this->tbEmail->Location = System::Drawing::Point(10, 145);
 			this->tbEmail->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(483, 39);
+			this->tbEmail->Size = System::Drawing::Size(483, 34);
 			this->tbEmail->TabIndex = 2;
 			// 
 			// label3
@@ -126,7 +127,7 @@ namespace inmobiliariaVer1 {
 			this->label3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->label3->Location = System::Drawing::Point(12, 210);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(170, 35);
+			this->label3->Size = System::Drawing::Size(147, 29);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Password:";
 			// 
@@ -140,7 +141,7 @@ namespace inmobiliariaVer1 {
 			this->tbPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(484, 39);
+			this->tbPassword->Size = System::Drawing::Size(484, 34);
 			this->tbPassword->TabIndex = 4;
 			// 
 			// btnOK
@@ -201,7 +202,7 @@ namespace inmobiliariaVer1 {
 				static_cast<System::Byte>(0)));
 			this->llRegister->Location = System::Drawing::Point(389, 418);
 			this->llRegister->Name = L"llRegister";
-			this->llRegister->Size = System::Drawing::Size(104, 29);
+			this->llRegister->Size = System::Drawing::Size(83, 25);
 			this->llRegister->TabIndex = 8;
 			this->llRegister->TabStop = true;
 			this->llRegister->Text = L"Register";
@@ -209,7 +210,7 @@ namespace inmobiliariaVer1 {
 			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->ClientSize = System::Drawing::Size(508, 456);
@@ -226,6 +227,7 @@ namespace inmobiliariaVer1 {
 			this->MinimumSize = System::Drawing::Size(347, 467);
 			this->Name = L"LoginForm";
 			this->Text = L"Login Form";
+			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->tableLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -282,12 +284,16 @@ namespace inmobiliariaVer1 {
 				"Database Connection Error",MessageBoxButtons::OK);
 		}*/
 	}
-
 	public: bool switchToRegister = false;
 
 	private: System::Void llRegister_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-		this->switchToRegister = true;
+		this->switchToRegister
+ = true;
 		this->Close();
 	}
+private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
