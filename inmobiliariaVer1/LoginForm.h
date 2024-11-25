@@ -103,7 +103,7 @@ namespace inmobiliariaVer1 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(94, 29);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Emailongg:";
+			this->label2->Text = L"Emaifdsfgg:";
 			// 
 			// tbEmail
 			// 
