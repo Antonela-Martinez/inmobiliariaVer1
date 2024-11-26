@@ -26,3 +26,5 @@ DataTable^ BaseDatosInmobiliaria::getData() {
 	return tabla;
 }
 
+
+
