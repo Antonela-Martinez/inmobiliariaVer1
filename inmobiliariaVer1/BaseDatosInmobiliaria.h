@@ -16,3 +16,5 @@ public:
 	void abrirConexion();
 	void cerrarConexion();
 };
+
+

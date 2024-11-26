@@ -26,5 +26,13 @@ DataTable^ BaseDatosInmobiliaria::getData() {
 	return tabla;
 }
 
+DataTable^ BaseDatosInmobiliaria::getData() {
+	String^ sql = "select * from empleados";
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn);
+	MySqlDataAdapter^ data = gcnew MySqlDataAdapter(cursor);
+	DataTable^ tabla = gcnew DataTable();
+	data->Fill(tabla);//llenando datos a tabla
+	return tabla;
+}
 
 
