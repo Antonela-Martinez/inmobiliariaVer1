@@ -20,7 +20,7 @@ namespace inmobiliariaVer1 {
 		LoginForm(void)
 		{
 			InitializeComponent();
-			//COMENTADO POR GONZALAD
+			//
 			//TODO: agregar código de constructor aquí
 			//
 		}
@@ -103,7 +103,7 @@ namespace inmobiliariaVer1 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(94, 29);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Emailcambio:";
+			this->label2->Text = L"Email";
 			// 
 			// tbEmail
 			// 
