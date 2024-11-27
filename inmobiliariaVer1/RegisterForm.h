@@ -1,5 +1,6 @@
-#pragma once
+      #pragma once
 #include "User.h"
+#include "BaseDatosInmobiliaria.h"
 
 namespace inmobiliariaVer1 {
 
@@ -24,6 +25,7 @@ namespace inmobiliariaVer1 {
 			//TODO: agregar código de constructor aquí
 			//
 			this->CenterToScreen();
+			this->data = gcnew BaseDatosInmobiliaria();
 		}
 
 	protected:
@@ -57,7 +59,7 @@ namespace inmobiliariaVer1 {
 	private: System::Windows::Forms::Button^ btnCancel;
 	private: System::Windows::Forms::Button^ btnOK;
 	private: System::Windows::Forms::LinkLabel^ llLogin;
-
+	private: BaseDatosInmobiliaria^ data;//creando data
 
 
 
@@ -102,9 +104,9 @@ namespace inmobiliariaVer1 {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 9);
+			this->label1->Location = System::Drawing::Point(11, 7);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(654, 59);
+			this->label1->Size = System::Drawing::Size(581, 47);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Register";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -114,35 +116,38 @@ namespace inmobiliariaVer1 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(43, 97);
+			this->label2->Location = System::Drawing::Point(38, 78);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(78, 29);
+			this->label2->Size = System::Drawing::Size(64, 25);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Name";
 			// 
 			// tbName
 			// 
-			this->tbName->Location = System::Drawing::Point(236, 101);
+			this->tbName->Location = System::Drawing::Point(210, 81);
+			this->tbName->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbName->Name = L"tbName";
-			this->tbName->Size = System::Drawing::Size(414, 26);
+			this->tbName->Size = System::Drawing::Size(368, 22);
 			this->tbName->TabIndex = 2;
+			this->tbName->TextChanged += gcnew System::EventHandler(this, &RegisterForm::tbName_TextChanged);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(47, 145);
+			this->label3->Location = System::Drawing::Point(42, 116);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(74, 29);
+			this->label3->Size = System::Drawing::Size(60, 25);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Email";
 			// 
 			// tbEmail
 			// 
-			this->tbEmail->Location = System::Drawing::Point(236, 145);
+			this->tbEmail->Location = System::Drawing::Point(210, 116);
+			this->tbEmail->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(414, 26);
+			this->tbEmail->Size = System::Drawing::Size(368, 22);
 			this->tbEmail->TabIndex = 2;
 			// 
 			// label4
@@ -150,17 +155,18 @@ namespace inmobiliariaVer1 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(43, 187);
+			this->label4->Location = System::Drawing::Point(38, 150);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(83, 29);
+			this->label4->Size = System::Drawing::Size(69, 25);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"Phone";
 			// 
 			// tbPhone
 			// 
-			this->tbPhone->Location = System::Drawing::Point(236, 187);
+			this->tbPhone->Location = System::Drawing::Point(210, 150);
+			this->tbPhone->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbPhone->Name = L"tbPhone";
-			this->tbPhone->Size = System::Drawing::Size(414, 26);
+			this->tbPhone->Size = System::Drawing::Size(368, 22);
 			this->tbPhone->TabIndex = 2;
 			// 
 			// label5
@@ -168,17 +174,18 @@ namespace inmobiliariaVer1 {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(47, 235);
+			this->label5->Location = System::Drawing::Point(42, 188);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(102, 29);
+			this->label5->Size = System::Drawing::Size(85, 25);
 			this->label5->TabIndex = 1;
 			this->label5->Text = L"Address";
 			// 
 			// tbAddress
 			// 
-			this->tbAddress->Location = System::Drawing::Point(236, 239);
+			this->tbAddress->Location = System::Drawing::Point(210, 191);
+			this->tbAddress->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbAddress->Name = L"tbAddress";
-			this->tbAddress->Size = System::Drawing::Size(414, 26);
+			this->tbAddress->Size = System::Drawing::Size(368, 22);
 			this->tbAddress->TabIndex = 2;
 			// 
 			// label6
@@ -186,18 +193,19 @@ namespace inmobiliariaVer1 {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(47, 279);
+			this->label6->Location = System::Drawing::Point(42, 223);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(120, 29);
+			this->label6->Size = System::Drawing::Size(98, 25);
 			this->label6->TabIndex = 1;
 			this->label6->Text = L"Password";
 			// 
 			// tbPassword
 			// 
-			this->tbPassword->Location = System::Drawing::Point(236, 283);
+			this->tbPassword->Location = System::Drawing::Point(210, 226);
+			this->tbPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(414, 26);
+			this->tbPassword->Size = System::Drawing::Size(368, 22);
 			this->tbPassword->TabIndex = 2;
 			// 
 			// label7
@@ -205,25 +213,27 @@ namespace inmobiliariaVer1 {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(20, 324);
+			this->label7->Location = System::Drawing::Point(18, 259);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(210, 29);
+			this->label7->Size = System::Drawing::Size(171, 25);
 			this->label7->TabIndex = 1;
 			this->label7->Text = L"Confirm Password";
 			// 
 			// tbConfirmPassword
 			// 
-			this->tbConfirmPassword->Location = System::Drawing::Point(236, 324);
+			this->tbConfirmPassword->Location = System::Drawing::Point(210, 259);
+			this->tbConfirmPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tbConfirmPassword->Name = L"tbConfirmPassword";
 			this->tbConfirmPassword->PasswordChar = '*';
-			this->tbConfirmPassword->Size = System::Drawing::Size(414, 26);
+			this->tbConfirmPassword->Size = System::Drawing::Size(368, 22);
 			this->tbConfirmPassword->TabIndex = 2;
 			// 
 			// btnCancel
 			// 
-			this->btnCancel->Location = System::Drawing::Point(471, 377);
+			this->btnCancel->Location = System::Drawing::Point(419, 302);
+			this->btnCancel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnCancel->Name = L"btnCancel";
-			this->btnCancel->Size = System::Drawing::Size(179, 41);
+			this->btnCancel->Size = System::Drawing::Size(159, 33);
 			this->btnCancel->TabIndex = 3;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = true;
@@ -231,9 +241,10 @@ namespace inmobiliariaVer1 {
 			// 
 			// btnOK
 			// 
-			this->btnOK->Location = System::Drawing::Point(236, 377);
+			this->btnOK->Location = System::Drawing::Point(210, 302);
+			this->btnOK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnOK->Name = L"btnOK";
-			this->btnOK->Size = System::Drawing::Size(179, 41);
+			this->btnOK->Size = System::Drawing::Size(159, 33);
 			this->btnOK->TabIndex = 3;
 			this->btnOK->Text = L"Ok";
 			this->btnOK->UseVisualStyleBackColor = true;
@@ -242,9 +253,9 @@ namespace inmobiliariaVer1 {
 			// llLogin
 			// 
 			this->llLogin->AutoSize = true;
-			this->llLogin->Location = System::Drawing::Point(571, 436);
+			this->llLogin->Location = System::Drawing::Point(508, 349);
 			this->llLogin->Name = L"llLogin";
-			this->llLogin->Size = System::Drawing::Size(48, 20);
+			this->llLogin->Size = System::Drawing::Size(40, 16);
 			this->llLogin->TabIndex = 4;
 			this->llLogin->TabStop = true;
 			this->llLogin->Text = L"Login";
@@ -252,11 +263,11 @@ namespace inmobiliariaVer1 {
 			// 
 			// RegisterForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->ClientSize = System::Drawing::Size(664, 491);
+			this->ClientSize = System::Drawing::Size(590, 393);
 			this->Controls->Add(this->llLogin);
 			this->Controls->Add(this->btnOK);
 			this->Controls->Add(this->btnCancel);
@@ -274,6 +285,7 @@ namespace inmobiliariaVer1 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"RegisterForm";
 			this->Text = L"Register Form";
 			this->ResumeLayout(false);
@@ -293,61 +305,12 @@ namespace inmobiliariaVer1 {
 
 	public: User^ user = nullptr;
 	private: System::Void btnOK_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ name = tbName->Text;
-		String^ email = tbEmail->Text;
-		String^ phone = tbPhone->Text;
-		String^ address = tbAddress->Text;
-		String^ password = tbPassword->Text;
-		String^ confirmPassword = tbConfirmPassword->Text;
+		this->data->abrirConexion();
 
-		if (name->Length == 0 || email->Length == 0 ||
-			phone->Length == 0 || address->Length == 0 ||
-			password->Length == 0) {
-
-			MessageBox::Show("Please enter all the field",
-				"On or more empty fields", MessageBoxButtons::OK);
-			return;
-		}
-
-		if (String::Compare(password, confirmPassword) != 0) {
-			MessageBox::Show("Password and confirm password do not match",
-				"Password Error", MessageBoxButtons::OK);
-			return;
-		}
-		/*
-		try
-		{
-			String^ connstring = "";//12:20 Pner link de coneccion con la base de datos
-			SqlCopnnection sqlConn(connString);
-			sqlConn.Open();
-
-			String^ sqlQuery = "INSERT INTO users " +
-			"(name, email, phone, address, password) VALUES "+
-			"(@name, @email, @phone, @address, @password);";
-
-			SqlCommand command(sqlquery, % sqlConn);
-			command.Parameters->AddWithValue("@name", name);
-			command.Parameters->AddWithValue("@email",email);
-			command.Parameters->AddWithValue("@phone", phone);
-			command.Parameters->AddWithValue("@address",address);
-			command.Parameters->AddWithValue("@password", password);
-
-			command.ExecuteNonQuery();
-			user = gcnew User;
-			user->name = name;
-			user->email = email;
-			user->phone = phone;
-			user->addres = address;
-			user->password = password;
-
-			this->Close();
-		}
-		catch (Exception^ ex) {
-			MessageBox::Show("Failed to register new user",
-				"Register Failure", MessageBoxButtons::OK);
-		}
-		*/
-
+		this->data->insertar(this->tbName->Text, this->tbEmail->Text, this->tbPhone->Text, this->tbAddress->Text, this->tbPassword->Text);
+		this->data->cerrarConexion();
 	}
+private: System::Void tbName_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
