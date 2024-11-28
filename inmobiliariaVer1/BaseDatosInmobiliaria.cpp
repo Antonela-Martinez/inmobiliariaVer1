@@ -3,12 +3,12 @@
 
 BaseDatosInmobiliaria::BaseDatosInmobiliaria() {
 	//metodo constructor para iniciar la base de datos
-	this->connectionString = "datasource=localhost; username=root; password=barza20vmg10/; database=inmobiliaria;  ";
+	this->connectionString = "datasource=localhost; username=root; password=""; database=inmobiliaria;  ";
 	this->conn = gcnew MySqlConnection(this->connectionString);
 }
 
 MySqlConnection^ BaseDatosInmobiliaria::getConnection() {
-	return this->conn;  // Retorna la conexiÛn MySQL
+	return this->conn;  // Retorna la conexi√≥n MySQL
 }
 
 void BaseDatosInmobiliaria::abrirConexion() {
@@ -33,7 +33,7 @@ DataTable^ BaseDatosInmobiliaria::getData() {
 
 void BaseDatosInmobiliaria::insertar(String^ n,String^ e,String^ t,String^ d,String^ c){
 	
-	String^ sql = "insert into empleados(nombre, email, telefono, direccion, contraseÒa) values ('" + n + "','" + e + "', " + t + ", '" + d + "', '" + c + "')";
+	String^ sql = "insert into empleados(nombre, email, telefono, direccion, contrase√±a) values ('" + n + "','" + e + "', " + t + ", '" + d + "', '" + c + "')";
 	MySqlCommand^ cursor = gcnew MySqlCommand(sql, getConnection());
 
 	try
