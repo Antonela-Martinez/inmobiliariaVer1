@@ -110,6 +110,7 @@ namespace inmobiliariaVer1 {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Register";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label1->Click += gcnew System::EventHandler(this, &RegisterForm::label1_Click);
 			// 
 			// label2
 			// 
@@ -288,6 +289,7 @@ namespace inmobiliariaVer1 {
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"RegisterForm";
 			this->Text = L"Register Form";
+			this->Load += gcnew System::EventHandler(this, &RegisterForm::RegisterForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -311,6 +313,10 @@ namespace inmobiliariaVer1 {
 		this->data->cerrarConexion();
 	}
 private: System::Void tbName_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void RegisterForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

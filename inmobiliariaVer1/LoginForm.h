@@ -1,5 +1,7 @@
 #pragma once
 #include "User.h"
+#include "BaseDatosInmobiliaria.h" //agregado 27/11
+#include "MainForm.h"
 
 namespace inmobiliariaVer1 {
 
@@ -23,6 +25,7 @@ namespace inmobiliariaVer1 {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+			this->data = gcnew BaseDatosInmobiliaria();
 		}
 
 	protected:
@@ -45,7 +48,7 @@ namespace inmobiliariaVer1 {
 	private: System::Windows::Forms::Button^ btnCancelar;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
 	private: System::Windows::Forms::LinkLabel^ llRegister;
-
+	private: BaseDatosInmobiliaria^ data;//agregado 27/11
 
 
 
@@ -249,48 +252,59 @@ namespace inmobiliariaVer1 {
 				"Email or Password Empty", MessageBoxButtons::OK);
 			return;
 	    }
-		/*
-		try
-		{
-			//String^ connstring = "";//12:20 Pner link de coneccion con la base de datos
-			//SqlCopnnection sqlConn(connString);
-			//sqlConn.Open();
+		//agregando 27/11
+		try {
+			this->data->abrirConexion();
 
-			//String^ sqlquery = "SELECT * FROM
-			// users WHERE email=@email AND password=@pwd;";
-			//command.Parameters->AddWithValue("@email", email);
-			//command.Parameters->AddWithValue("@pwd", password);
+			// Usar parámetros para evitar inyección SQL
+			String^ sql = "SELECT nombre, email, telefono, direccion, contraseña FROM empleados WHERE email = @Email AND contraseña = @Password";
+			MySqlCommand^ cmd = gcnew MySqlCommand(sql,this->data->getConnection());
+			cmd->Parameters->AddWithValue("@Email", email);
+			cmd->Parameters->AddWithValue("@Password", password);
 
-			SqlDataReader^ reader = command.ExecuteReader();
-			if (reader->Read()) {
-				user = gcnew User;
-				user->id = reader->GetInt32(0);
-				user->name = reader->GetString(1);
-				user->email = reader->GetString(2);
-				user->phone = reader->GetString(3);
-				user->address = reader->GetString4);
-				user->password = reader->GetString(5);
+			MySqlDataReader^ reader = cmd->ExecuteReader();
 
-				this->Close();
+			if (reader->Read())
+			{
+				// Crear un objeto User con los datos recuperados
+				User^ user = gcnew User();
+				user->name = reader["nombre"]->ToString(); // Asegúrate de que el nombre del campo sea correcto
+				user->email = reader["email"]->ToString();
+				user->phone = reader["telefono"]->ToString();
+				user->address = reader["direccion"]->ToString();
+				user->password = reader["contraseña"]->ToString();
+
+				this->data->cerrarConexion();
+
+				MessageBox::Show("Ingreso exitoso.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				// Crear la instancia de MainForm pasando el objeto User
+				MainForm^ mainForm = gcnew MainForm(user);
+				this->Visible = false;
+				mainForm->ShowDialog();
+				this->Visible = true;
+				
 			}
-			else {
-				MessageBox::Show("email or password is incorrect",
-					"Email or Password Error", MessageBoxButtons::OK);
+			else
+			{
+				this->data->cerrarConexion();
+				MessageBox::Show("Usuario no registrado o credenciales incorrectas.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
-		catch (Exception^ e)
-		{
-			MessageBox::Show("Failed to connect to database",
-				"Database Connection Error",MessageBoxButtons::OK);
-		}*/
+		catch (Exception^ ex) {
+			this->data->cerrarConexion();
+			MessageBox::Show("Error al verificar las credenciales: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+
 	}
 	public: bool switchToRegister = false;
 
 	private: System::Void llRegister_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-		this->switchToRegister
- = true;
+		this->switchToRegister = true;
 		this->Close();
 	}
+
+
 private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {

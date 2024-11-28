@@ -131,6 +131,7 @@
     <ClCompile Include="BaseDatosInmobiliaria.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="MostrarEmpleados.cpp" />
     <ClCompile Include="NuevoClienteForm.cpp" />
     <ClCompile Include="NuevoInmuebleForm.cpp" />
     <ClCompile Include="Program.cpp" />
@@ -142,6 +143,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MostrarEmpleados.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="NuevoClienteForm.h">
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarEmpleados.resx">
+      <DependentUpon>MostrarEmpleados.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoClienteForm.resx">
       <DependentUpon>NuevoClienteForm.h</DependentUpon>

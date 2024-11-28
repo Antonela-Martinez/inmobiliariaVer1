@@ -13,6 +13,7 @@ private:
 public:
 	BaseDatosInmobiliaria();
 	DataTable^ getData();
+	MySqlConnection^ getConnection();
 	void abrirConexion();
 	void cerrarConexion();
 	void insertar(String^, String^,String^,String^,String^);

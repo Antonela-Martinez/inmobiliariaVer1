@@ -7,19 +7,24 @@ BaseDatosInmobiliaria::BaseDatosInmobiliaria() {
 	this->conn = gcnew MySqlConnection(this->connectionString);
 }
 
+MySqlConnection^ BaseDatosInmobiliaria::getConnection() {
+	return this->conn;  // Retorna la conexión MySQL
+}
 
 void BaseDatosInmobiliaria::abrirConexion() {
-	this->conn->Open();
+	//this->conn->Open();
+	getConnection()->Open();
 }
 
 void BaseDatosInmobiliaria::cerrarConexion() {
-	this->conn->Close();
+	//this->conn->Close();
+	getConnection()->Close();
 }
 
 DataTable^ BaseDatosInmobiliaria::getData() {
 
 	String^ sql = "select * from empleados";
-	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn);
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, getConnection());
 	MySqlDataAdapter^ data = gcnew MySqlDataAdapter(cursor);
 	DataTable^ tabla = gcnew DataTable();
 	data->Fill(tabla);//llenando datos a tabla
@@ -28,8 +33,8 @@ DataTable^ BaseDatosInmobiliaria::getData() {
 
 void BaseDatosInmobiliaria::insertar(String^ n,String^ e,String^ t,String^ d,String^ c){
 	
-	String^ sql = "insert into empleados(id_nombre, email, telefono, direccion, contraseña) values ('" + n + "','" + e + "', " + t + ", '" + d + "', '" + c + "')";
-	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn);
+	String^ sql = "insert into empleados(nombre, email, telefono, direccion, contraseña) values ('" + n + "','" + e + "', " + t + ", '" + d + "', '" + c + "')";
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, getConnection());
 
 	try
 	{
