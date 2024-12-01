@@ -17,7 +17,8 @@ public:
 	void abrirConexion();
 	void cerrarConexion();
 	void insertar(String^, String^,String^,String^,String^);
-
+	void modificar(String^, String^, String^, String^, String^, String^);
+	void eliminar(String^);
 };
 
 

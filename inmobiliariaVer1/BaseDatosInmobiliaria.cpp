@@ -50,4 +50,54 @@ void BaseDatosInmobiliaria::insertar(String^ n,String^ e,String^ t,String^ d,Str
 	}
 }
 
+void BaseDatosInmobiliaria::modificar(String^ n, String^ e, String^ t, String^ d, String^ c, String^ nomre){ 
 
+	String^ sql = "update empleados set nombre = '"+ n +"', email = '"+ e +"', telefono = '"+ t + "',  direccion = '"+ d +"', contraseña = '"+ c + "' where nombre = '"+ nomre +"'";
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, getConnection());
+	
+	try
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		cursor->ExecuteNonQuery();
+
+	}
+	catch (Exception^ e)
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show(e->Message);
+
+
+	}
+
+}
+
+void BaseDatosInmobiliaria::eliminar(String^ nombre) {
+	String^ sql = "delete from empleados where nombre = '" + nombre + "'";
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, getConnection());
+
+	try
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		cursor->ExecuteNonQuery();
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show("Eliminado correctamente !");
+
+	}
+	catch (Exception^ e)
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show(e->Message);
+
+
+	}
+}
