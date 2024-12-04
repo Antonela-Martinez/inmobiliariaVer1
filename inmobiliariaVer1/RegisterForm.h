@@ -308,8 +308,8 @@ namespace inmobiliariaVer1 {
 	public: User^ user = nullptr;
 	private: System::Void btnOK_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->data->abrirConexion();
-
 		this->data->insertar(this->tbName->Text, this->tbEmail->Text, this->tbPhone->Text, this->tbAddress->Text, this->tbPassword->Text);
+		MessageBox::Show("Usuario registrado correctamente!");
 		this->data->cerrarConexion();
 	}
 private: System::Void tbName_TextChanged(System::Object^ sender, System::EventArgs^ e) {

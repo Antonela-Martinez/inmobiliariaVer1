@@ -12,13 +12,17 @@ private:
 
 public:
 	BaseDatosInmobiliaria();
-	DataTable^ getData();
+	DataTable^ getData();//muestra empleados
+	DataTable^ getDataCLientes();//muestra clientes
 	MySqlConnection^ getConnection();
 	void abrirConexion();
 	void cerrarConexion();
 	void insertar(String^, String^,String^,String^,String^);
+	void insertarCl(String^, String^, String^, String^, String^, String^);
 	void modificar(String^, String^, String^, String^, String^, String^);
+	void modificarCl(String^, String^, String^, String^, String^, String^, String^);
 	void eliminar(String^);
+	void eliminarCl(String^);
 };
 
 

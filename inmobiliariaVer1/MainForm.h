@@ -1,6 +1,7 @@
 #pragma once
 #include"User.h"
 #include"MostrarEmpleados.h"
+#include"MostrarClientes.h"
 
 namespace inmobiliariaVer1 {
 
@@ -461,6 +462,7 @@ namespace inmobiliariaVer1 {
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Clientes";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MainForm::button2_Click);
 			// 
 			// button1
 			// 
@@ -714,5 +716,13 @@ namespace inmobiliariaVer1 {
 
 private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		//muestra clientes
+		inmobiliariaVer1::MostrarClientes^ mostrarC = gcnew inmobiliariaVer1::MostrarClientes();
+		this->Visible = false;
+		mostrarC->ShowDialog();
+		this->Visible = true;
+	}
 };
 }
