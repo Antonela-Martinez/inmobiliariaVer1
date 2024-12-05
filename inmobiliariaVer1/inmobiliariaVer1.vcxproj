@@ -133,8 +133,10 @@
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ModificarCl.cpp" />
     <ClCompile Include="ModificarEm.cpp" />
+    <ClCompile Include="ModificarInm.cpp" />
     <ClCompile Include="MostrarClientes.cpp" />
     <ClCompile Include="MostrarEmpleados.cpp" />
+    <ClCompile Include="MostrarInmuebles.cpp" />
     <ClCompile Include="NuevoClienteForm.cpp" />
     <ClCompile Include="NuevoInmuebleForm.cpp" />
     <ClCompile Include="Program.cpp" />
@@ -154,10 +156,16 @@
     <ClInclude Include="ModificarEm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ModificarInm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MostrarClientes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MostrarEmpleados.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MostrarInmuebles.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="NuevoClienteForm.h">
@@ -184,11 +192,17 @@
     <EmbeddedResource Include="ModificarEm.resx">
       <DependentUpon>ModificarEm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarInm.resx">
+      <DependentUpon>ModificarInm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MostrarClientes.resx">
       <DependentUpon>MostrarClientes.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarEmpleados.resx">
       <DependentUpon>MostrarEmpleados.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarInmuebles.resx">
+      <DependentUpon>MostrarInmuebles.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoClienteForm.resx">
       <DependentUpon>NuevoClienteForm.h</DependentUpon>

@@ -2,6 +2,7 @@
 #include"User.h"
 #include"MostrarEmpleados.h"
 #include"MostrarClientes.h"
+#include"MostrarInmuebles.h"
 
 namespace inmobiliariaVer1 {
 
@@ -449,6 +450,7 @@ namespace inmobiliariaVer1 {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Inmuebles";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MainForm::button3_Click);
 			// 
 			// button2
 			// 
@@ -722,6 +724,12 @@ private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e
 		inmobiliariaVer1::MostrarClientes^ mostrarC = gcnew inmobiliariaVer1::MostrarClientes();
 		this->Visible = false;
 		mostrarC->ShowDialog();
+		this->Visible = true;
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		inmobiliariaVer1::MostrarInmuebles^ mostrarIn = gcnew inmobiliariaVer1::MostrarInmuebles();
+		this->Visible = false;
+		mostrarIn->ShowDialog();
 		this->Visible = true;
 	}
 };
